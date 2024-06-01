@@ -51,5 +51,5 @@ if __name__ == "__main__":
         df = pd.concat([df, tmp], ignore_index=True)
 
     df = df.sort_values(["Date"])
-    df.to_csv("HotSearches.csv", index=False)
+    df.to_excel("HotSearches.xlsx", index=False)
 
