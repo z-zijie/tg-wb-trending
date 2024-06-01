@@ -51,6 +51,5 @@ if __name__ == "__main__":
         tmp = pd.DataFrame(res, columns=["Date", "Hashtag", "Category", "URL"])
         df = pd.concat([df, tmp], ignore_index=True)
 
-    df = df.sort_values(["Date"])
     df.to_excel("HotSearches.xlsx", index=False)
 
