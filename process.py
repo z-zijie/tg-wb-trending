@@ -42,6 +42,7 @@ def parse_markdown_file(fpath):
 
 if __name__ == "__main__":
     filelist = os.listdir(BASE_DIR)
+    filelist = sorted(filelist)
     df = pd.DataFrame(columns=["Date", "Hashtag", "Category", "URL"])
     for idx, filename in enumerate(filelist):
         filepath = f'{BASE_DIR}/{filename}'
