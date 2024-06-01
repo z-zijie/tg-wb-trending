@@ -40,6 +40,7 @@ def parse_markdown_file(fpath):
     file_.close()
     return lst
 
+
 if __name__ == "__main__":
     filelist = os.listdir(BASE_DIR)
     filelist = sorted(filelist)
