@@ -18,6 +18,8 @@ def find_url(str_):
 
 
 def find_category(str_):
+    if '`' not in str_:
+        return ''
     a = str_.find('`')
     b = str_.rfind('`')
     return str_[a+1:b]
@@ -51,6 +53,8 @@ if __name__ == "__main__":
         res = parse_markdown_file(filepath)
         tmp = pd.DataFrame(res, columns=["Date", "Hashtag", "Category", "URL"])
         df = pd.concat([df, tmp], ignore_index=True)
+        # if idx > 2:
+        #     break
 
     df.to_excel("HotSearches.xlsx", index=False)
 
